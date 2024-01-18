@@ -48,7 +48,7 @@ public class ContactService {
     public void deleteContact(Long id) {
         Contact contact = contactRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Contact not found"));
-        contact.setIsActive(false);
+        contact.setIsActive(false); // Vajas kliendi selgitust - jäta nii nagu on / krüpteeri andmed / tavaline kustuta
         contactRepository.save(contact);
     }
 
