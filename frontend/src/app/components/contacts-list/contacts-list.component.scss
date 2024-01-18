@@ -1,0 +1,18 @@
+mat-form-field{
+    margin-bottom: -22px;
+    text-align: center;
+}
+
+th {
+background: #F5F5F5 !important;
+text-align: center;
+}
+
+td {
+text-align: center;
+}
+
+:host ::ng-deep .mat-sort-header-container {
+display: flex;
+justify-content: center;
+}

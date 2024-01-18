@@ -20,7 +20,7 @@ export class ContactsListComponent  implements OnInit{
   ) {}
 
   searchTerm: string = '';
-  displayedColumns: string[] = ['realName', 'codeName', 'phoneNumber'];
+  displayedColumns: string[] = ['realName', 'codeName', 'phoneNumber', 'actions'];
 
   ngOnInit(): void {
     this.loadContacts();
@@ -64,4 +64,18 @@ export class ContactsListComponent  implements OnInit{
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
   }
 
+  deleteContact(contactId: number) {
+    this.contactService.deleteContact(contactId).subscribe(() => {
+      this.loadContacts();
+    });
+  }
+
+
+  editContact(contactId: number) {
+    this.router.navigate(['/kontakt/muuda', contactId]);
+  }
+
+  addContact() {
+    this.router.navigate(['/kontakt/lisa']);
+  }
 }

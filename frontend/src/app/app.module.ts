@@ -13,10 +13,13 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { ContactUpsertComponent } from './components/contact-upsert/contact-upsert.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    ContactUpsertComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     MatTableModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
