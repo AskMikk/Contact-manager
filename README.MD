@@ -27,4 +27,4 @@
 3. Navigeerige projekti frontend kataloogi - `cd frontend`.
 4. Installige kõik sõltuvused `npm install` abil.
 5. Käivitage arendusserver `npm run start`.
-   - Frontend töötab pordil 4200.
+   - Frontend töötab pordil 4200. 
